@@ -440,7 +440,8 @@ commandPalette.addEventListener("click", (event) => {
 commandTargets.forEach((item) => {
   item.addEventListener("click", () => {
     setCommandPalette(false);
-    document.querySelector(item.dataset.commandTarget).scrollIntoView({ behavior: "smooth" });
+    const target = document.querySelector(item.dataset.commandTarget);
+    if (target) target.scrollIntoView({ behavior: "smooth" });
   });
 });
 

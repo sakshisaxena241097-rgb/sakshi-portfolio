@@ -1471,10 +1471,30 @@ a {
 @media (max-width: 900px) {
   .site-header {
     grid-template-columns: 1fr auto auto;
+    gap: 10px;
+    padding: 12px 14px;
   }
 
   .nav-links {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 6px 0 2px;
+    scrollbar-width: none;
+    font-size: 0.82rem;
+    white-space: nowrap;
+  }
+
+  .nav-links::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-links a {
+    flex: 0 0 auto;
+    border: 1px solid color-mix(in srgb, currentColor 28%, transparent);
+    border-radius: 999px;
+    padding: 7px 10px;
   }
 
   .intro-strip,
@@ -1533,18 +1553,187 @@ a {
 }
 
 @media (max-width: 620px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .brand span:last-child {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icon-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .command-button {
+    min-height: 36px;
+    padding: 0 10px;
+  }
+
   .hero {
-    min-height: 84vh;
-    padding: 112px 18px 56px;
+    min-height: auto;
+    padding: 142px 16px 42px;
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 22vw, 5.6rem);
+    font-size: clamp(3.25rem, 17vw, 4.9rem);
+    line-height: 0.92;
+  }
+
+  .hero-copy {
+    margin-top: 18px;
+    font-size: 1rem;
+  }
+
+  .hero-actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .primary-link,
+  .ghost-link,
+  .outline-link,
+  .primary-button {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .hero-badges {
+    gap: 6px;
+  }
+
+  .system-card {
+    padding: 14px;
+  }
+
+  .signal-grid {
+    gap: 8px;
+  }
+
+  .signal-grid div {
+    padding: 10px;
+  }
+
+  .signal-grid strong {
+    font-size: 1.45rem;
+  }
+
+  .terminal-lines {
+    font-size: 0.74rem;
+    overflow-wrap: anywhere;
+  }
+
+  .intro-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .section-shell,
+  .signal-band,
+  .about-band,
+  .lab-section,
+  .skills-band,
+  .education-band,
+  .blueprint-section,
+  .readiness-section,
+  .credentials-page-section {
+    padding: 44px 16px;
+  }
+
+  .section-heading h2,
+  .about-band h2,
+  .signal-band h2,
+  .lab-section h2,
+  .skills-band h2,
+  .education-band h2,
+  .blueprint-section h2,
+  .readiness-section h2 {
+    font-size: clamp(2.15rem, 12vw, 3.2rem);
   }
 
   .section-heading {
     display: grid;
     align-items: start;
+  }
+
+  .about-portrait-card img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .featured-article {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .featured-inner {
+    min-height: 280px;
+  }
+
+  .article-card {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .article-card h3,
+  .featured-article h3,
+  .work-item h3 {
+    font-size: 1.55rem;
+  }
+
+  .blueprint-grid article,
+  .pipeline-node {
+    min-height: auto;
+  }
+
+  .pipeline-node strong {
+    margin-top: 28px;
+  }
+
+  .node-detail,
+  .stack-panel,
+  .readiness-panel {
+    padding: 18px;
+  }
+
+  .readiness-chip,
+  .stack-tab,
+  .topic-tab,
+  .about-tab,
+  .about-chips button {
+    min-height: 36px;
+    padding-inline: 11px;
+    font-size: 0.86rem;
+  }
+
+  .credentials-hero {
+    min-height: auto;
+    padding: 130px 16px 50px;
+  }
+
+  .credentials-hero h1 {
+    font-size: clamp(3.1rem, 17vw, 4.8rem);
+  }
+
+  .badge-placeholder {
+    min-height: 220px;
+  }
+
+  .footer-tape-track {
+    gap: 24px;
+    padding: 11px 0;
+    animation-duration: 52s;
+  }
+
+  .footer-tape-track span {
+    font-size: 0.76rem;
   }
 
   .intro-strip div {
